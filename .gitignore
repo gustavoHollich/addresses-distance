@@ -5,8 +5,15 @@
 #OS files
 .DS_Store
 
-# Process output file
-AddressesOutput.csv
-
 # node_modules
 node_modules
+
+# Process files
+AddressesOutput.csv
+AddressesErrors.csv
+
+# Logs
+logs
+
+#build files
+build
