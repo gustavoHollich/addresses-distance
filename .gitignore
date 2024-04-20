@@ -11,6 +11,7 @@ node_modules
 # Process files
 AddressesOutput.csv
 AddressesErrors.csv
+AddressesInput.csv
 
 # Logs
 logs
