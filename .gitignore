@@ -1,0 +1,12 @@
+# IDE files
+.idea
+.vscode
+
+#OS files
+.DS_Store
+
+# Process output file
+AddressesOutput.csv
+
+# node_modules
+node_modules

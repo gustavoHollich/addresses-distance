@@ -1,0 +1,25 @@
+{
+  "name": "addresses",
+  "version": "1.0.0",
+  "description": "App to calculate the distance between two addresses",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "addresses",
+    "distance",
+    "geolocation"
+  ],
+  "author": "Gustavo Hollich <gustavo.hollich@globant.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.2"
+  }
+}
