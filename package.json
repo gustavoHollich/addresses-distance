@@ -1,5 +1,5 @@
 {
-  "name": "addresses",
+  "name": "Addresses-distance",
   "version": "1.0.0",
   "description": "App to calculate the distance between two addresses",
   "main": "app.js",
@@ -16,7 +16,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/gustavoHollich/addresses-distance.git"
   },
   "dependencies": {
     "csv-parser": "^3.0.0",

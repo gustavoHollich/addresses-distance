@@ -20,7 +20,7 @@ function saveMapToCSV(map, filePath, header, flow) {
         }
         fs.writeFile(filePath, csvContent, (err) => {
             if (err) throw err;
-            console.log("Process completed successfully for", map.size,"records, CSV file saved on", filePath);
+            console.log("\nProcess completed successfully for", map.size,"records, CSV file saved on", filePath);
         });
     } else if(flow === 'error') {
         for (let [key, value] of map.entries()) {
@@ -33,7 +33,7 @@ function saveMapToCSV(map, filePath, header, flow) {
         }
         fs.writeFile(filePath, csvContent, (err) => {
             if (err) throw err;
-            console.error("\nProcess throw errors for",map.size, "records, these rows could be checked on", filePath)
+            console.error("Process throw errors for",map.size, "records, these rows could be checked on", filePath, "\n")
         });
     } else {
         throw new Error('csv writer flow not defined, check the parser flow');
@@ -42,7 +42,10 @@ function saveMapToCSV(map, filePath, header, flow) {
 }
 function replacePlusWithSpaces(inputString) {
     if(!inputString || inputString === '') return inputString;
-    return inputString.replace('+',' ');
+    while(inputString.includes('+')){
+        inputString = inputString.replace('+',' ');
+    }
+    return inputString
 }
 
 module.exports = {

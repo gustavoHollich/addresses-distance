@@ -13,7 +13,7 @@ const errorsFilePath = path.resolve(__dirname, 'AddressesErrors.csv');
 const errorsFileHeader = "Position,Name,Address,City,Country\n";
 
 //milliseconds timeout
-const timeOut = 1500;
+const timeOut = 1000;
 
 //Stored data from input file
 let dataMap = new Map();
@@ -29,6 +29,7 @@ let lonOrigin = null;
 
 async function main() {
     try {
+        console.clear()
         console.log("Starting process...")
         console.group()
         //Check geoserver is running
@@ -39,7 +40,7 @@ async function main() {
             await readCSVToMap(inputFilePath)
                 .then(async map => {
                     //console.log("Map with data readed from csv file", map)
-                    console.log("Starting api calls to geolocate " + map.size + " addresses.")
+                    console.log("Starting api calls to geolocate Origin + " + (map.size-1) + " addresses read.")
                     //Get lat and lon from each row in input file
                     for (let [key, value] of map.entries()) {
                         //Sleep 1 second to avoid request limit
